@@ -229,7 +229,7 @@ function doPost(request) {
       default:
     }  
   } catch (excepcion) {
-    json = excepcion.message;    
+    json = { error: excepcion.message }
   }
   
   return ContentService
